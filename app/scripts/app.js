@@ -4,7 +4,8 @@ angular.module('newMotoApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'photomodule'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
