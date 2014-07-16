@@ -9,6 +9,10 @@ angular.module('newMotoApp')
       'title': 'Settings',
       'link': '/settings',
       'hide': '!currentUser'
+    },{
+        'title': 'Search',
+        'link': '/search',
+        'hide': '!currentUser'
     }];
 
     $scope.logout = function() {

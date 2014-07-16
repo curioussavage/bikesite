@@ -5,7 +5,8 @@ angular.module('newMotoApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'photomodule'
+  'photomodule',
+  'mgcrea.ngStrap'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
@@ -26,6 +27,15 @@ angular.module('newMotoApp', [
         controller: 'SettingsCtrl',
         authenticate: true
       })
+        .when('/search', {
+            templateUrl: 'partials/Search',
+            controller: 'SearchCtrl',
+            resolve: {
+                adds: function (Search) {
+                    return Search.getAdds();
+                }
+            }
+        })
       .otherwise({
         redirectTo: '/'
       });
