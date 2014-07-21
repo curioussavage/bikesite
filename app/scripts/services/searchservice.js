@@ -8,7 +8,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-                $http({method: 'GET', url: 'http://localhost:9001/search/'})   // for local host    /sampleAdds.json
+                $http({method: 'GET', url: 'http://localhost:9000/search'})   // for local host   http://localhost:9000
                     .success(function(data){
                         deferred.resolve(data);
                     }).error(function(err) { console.log(err) });
@@ -40,7 +40,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-                $http.post('http://localhost:9001/search/', params)  // for local host
+                $http.post('/api/search', params)  // for local host     http://localhost:9000
                     .success(function(data){
                         deferred.resolve(data);
 
@@ -50,7 +50,7 @@ angular.module('newMotoApp')
 
 
                 return deferred.promise;
-            },
+            }
 
 
         }

@@ -1,20 +1,20 @@
 <div ng-include="'partials/navbar'"></div>
 <div class = "searchcontainer">
 <!--<h2>Find Your next bike!</h2>-->
-<div id="searchbox" class="well">
+<div id="searchbox" class="">
     <!-- form for searching Adds-->
     <form class="form-horizontal form-group" ng-submit="searchDatabase(search)" >
         <!-- keyword search-->
-        <label>Search  </label><br><input label="Search"  type="text" class = "input-large form-control" ng-model="search.keywords"><br> <!--ng model was search.$ --!>
+        <!--<label>Search  </label>--><input label="Search" placeholder="Search"  type="text" class = "input-large form-control" ng-model="search.keywords"> <!--ng model was search.$ --!>
         <!-- select high and low price!!-->
-        <label>Price Range  </label><br><input label="Search"  type="text" ng-model="search.lowPrice" class = "input-large form-control" placeholder="Low"><br>
-        <input label="Search"  type="text" ng-model="search.highPrice" class = "input-large form-control" placeholder="High"><br>
-        <label>Mileage  </label>
-        <input label="Search"  type="text" ng-model="search.maxMileage" class = "input-large form-control" placeholder="Maximum">
+        <!--<label>Price Range  </label>--><input label="Search"  type="text" ng-model="search.lowPrice" class = "input-large form-control" placeholder="Low">
+        <input label="Search"  type="text" ng-model="search.highPrice" class = "input-large form-control" placeholder="High">
+
+        <input label="Search"  type="text" ng-model="search.maxMileage" class = "input-large form-control" placeholder="Maximum mileage">
 
             <label for="make" class="col-sm-2 control-label">Make</label>
 
-            <select class="form-control" id="make"
+            <select class="form-control" id="make" placeholder="make"
                     ng-model="search.make"
                     ng-options="key as key for (key , value) in makesAndModels" >
 
@@ -63,7 +63,7 @@
 
             <!--search results div-->
 
-<div id="searchresults" class="well" >
+<div id="searchresults" class="" >
 
 
 
@@ -82,16 +82,18 @@
        <!--<div>{{result.description}}</div>-->
 
    <!--</div>-->
-    <div class="modal favmodal" ng-show="myValue">
-        <div>this is a test modal blah blah blah</div>
-    </div>
+
+
+    <!--<div class="modal favmodal" ng-show="myValue">-->
+        <!--<div>this is a test modal blah blah blah</div>-->
+    <!--</div>-->
 
     <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing" ng-repeat="result in searchresults ">  <!-- | filter:search:strict  removed filter to troubleshooting-->
         <div class="media">
 
             <a class="pull-left"  ng-click="toggleModal(result)">
 
-                <img alt="image" class="img-responsive mainpic" src="images/Motorcycle_by_Diacon.jpg">
+                <img alt="image" class="img-responsive mainpic" src="{{result.images[0]}}">
             </a>
 
             <div class="clearfix visible-sm"></div>

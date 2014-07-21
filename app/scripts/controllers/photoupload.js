@@ -45,7 +45,7 @@ var photomodule = angular.module('photomodule', []);
 
 photomodule.controller('photoUploadCtrl', ['$scope', '$rootScope', '$routeParams', '$location',
     function($scope, $rootScope, $routeParams, $location) {
-        console.log('this is running')
+        console.log('photomodule is running')
         $scope.updateTitle = function(){
             var uploadParams = $scope.widget.fileupload('option', 'formData');
             uploadParams["context"] = "photo=" + $scope.title;
@@ -58,7 +58,7 @@ photomodule.controller('photoUploadCtrl', ['$scope', '$rootScope', '$routeParams
 
                 dropZone: "#direct_upload",
                 start: function (e) {
-                    debugger;
+
                     $scope.status = "Starting upload...";
                     $scope.$apply();
                 },
@@ -78,6 +78,10 @@ photomodule.controller('photoUploadCtrl', ['$scope', '$rootScope', '$routeParams
                 $scope.result = data.result;
                 $rootScope.photos.push(data.result);
                 $scope.$apply();
+                // log the photos array for testing
+                console.log($rootScope.photos)
+                $scope.listing.images.push($rootScope.photos[$rootScope.photos.length - 1].url)
+                console.log($scope.listing.images)
             });
 
 

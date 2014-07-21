@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('newMotoApp')
-  .controller('SettingsCtrl', function ($scope, User, Auth) {
+  .controller('SettingsCtrl', function ($scope, User, Auth, Sell, makeAndModel) {
     $scope.errors = {};
 
     $scope.changePassword = function(form) {
@@ -18,4 +18,33 @@ angular.module('newMotoApp')
         });
       }
 		};
+
+        // imported from sell controller in original app
+        $scope.makesAndModels = makeAndModel.makesAndModels;
+//    $scope.postedAdd = post
+        $scope.listing = {};
+        $scope.listing.images = [];
+
+        Auth.currentUser().$promise.then(function(user){
+            console.log('The ID is:', user._id);
+            $scope.listing.user = user._id;
+            console.log($scope.listing);
+        });
+
+//
+//            $scope.listing.user = x._id;
+//            console.log(x)
+//
+
+
+
+        $scope.submit = function () {
+
+            Sell.postAdd($scope.listing);
+
+        };
+
+
+
+
   });

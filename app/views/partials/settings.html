@@ -1,5 +1,7 @@
 
 <div ng-include="'partials/navbar.html'"></div>
+
+
 <!--this will be a little control bar to switch between the user account and the addpost form-->
 <!--<div class="controlBar">-->
 <!--<button ng-click=""></button>-->
@@ -39,6 +41,60 @@
 <!--</form>-->
 <!--</div>-->
 <!--</div>-->
+<form role="form" class="form-horizontal sellForm" ng-submit="submit()" type = "submit" >
+    <h1>Post your Add</h1>
+
+    <div class="required-field-block">
+        <input type="text" placeholder="Name" class="form-control" ng-model="listing.name">
+
+    </div>
+
+    <div class="required-field-block">
+        <input type="email" placeholder="Email" class="form-control col-sm-10" id="email" ng-model="listing.email">
+
+    </div>
+
+    <input type="tel" placeholder="Phone" class="form-control" id="phone" ng-model="listing.phone">
+
+    <label for="make" class="col-sm-2 control-label">Make</label>
+    <select class="form-control" id="make"
+            ng-model="listing.make"
+            ng-options="key as key for (key , value) in makesAndModels" >
+
+    </select>
+    <!--<label for="model" class="col-sm-2 control-label">model</label>-->
+
+    <select class="form-control" id="model" placeholder="model"
+            ng-model="listing.model"
+            ng-options="model as model for model in makesAndModels[listing.make]"
+            ng-disabled="!listing.make">
+    </select>
+
+    <div class="required-field-block">
+        <input type="text" placeholder="Year" class="form-control" ng-model="listing.year">
+
+    </div>
+    <div class="required-field-block">
+        <input type="text" placeholder="Mileage" class="form-control" ng-model="listing.mileage">
+
+    </div>
+    <div class="required-field-block">
+        <input type="text" placeholder="Price" class="form-control" ng-model="listing.price">
+
+    </div>
+    <div class="required-field-block">
+        <input type="text" placeholder="Add Title" class="form-control" ng-model="listing.title">
+
+    </div>
+    <div class="required-field-block">
+        <textarea rows="3" class="form-control" placeholder="Description" ng-model="listing.description"></textarea>
+
+    </div>
+
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
 
 <div id="direct_upload" ng-controller="photoUploadCtrl">
     <h1>New Photo</h1>
@@ -74,6 +130,7 @@
         <table>
             <tr ng-repeat="(key, value) in result">
                 <td> {{key}} </td> <td> {{ value }} </td>
+                <!--<div ><img style="height: 200px; width: 200px;" src="{{result.url}} ng-model="image"/></div>-->
             </tr>
         </table>
     </div>

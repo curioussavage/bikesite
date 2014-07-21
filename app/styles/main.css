@@ -30,8 +30,47 @@ body {
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
+/*
 
-/*my custom styles*/
+            modal css
+
+*/
+
+
+.favmodal {
+    background-color: #4585ff;
+    width:300px;
+    height: 300px;
+    float: right;
+
+}
+.mainmodal {
+    /*width:700px;*/
+}
+.modal-backdrop.am-fade {
+    opacity: .5;
+    transition: opacity .15s linear;
+    /*&.ng-enter {*/
+         /*opacity: 0;*/
+    /*&.ng-enter-active {*/
+         /*opacity: .5;*/
+     /*}*/
+    /*}*/
+    /*&.ng-leave {*/
+         /*opacity: .5;*/
+    /*&.ng-leave-active {*/
+         /*opacity: 0;*/
+        /*}*/
+    /*}*/
+}
+
+/*
+
+my custom styles
+
+*/
+
+
 .actions { margin: 20px 0; }
 .upload_link { color: #000; border: 1px solid #aaa; background-color: #e0e0e0;
     font-size: 18px; padding: 5px 10px; width: 250px; margin: 10px 0 20px 0;
@@ -122,7 +161,7 @@ form .error { color: #c55; margin: 0 10px; }
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 100%;  /* was 730px*/
   }
 }
 .container-narrow > hr {
@@ -165,3 +204,93 @@ form .error { color: #c55; margin: 0 10px; }
     border-bottom: 0;
   }
 }
+
+/*
+a {
+    color: #03a1d1;
+    text-decoration: none!important;
+}
+
+/**** LAYOUT ****/
+.list-inline>li {
+    padding: 0 10px 0 0;
+}
+.container-pad {
+    padding: 30px 15px;
+}
+
+
+/**** MODULE ****/
+.bgc-fff {
+    background-color: #fff!important;
+}
+.box-shad {
+    -webkit-box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+    box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+}
+.brdr {
+    border: 1px solid #ededed;
+}
+
+/* Font changes */
+.fnt-smaller {
+    font-size: .9em;
+}
+.fnt-lighter {
+    color: #bbb;
+}
+
+/* Padding - Margins */
+.pad-10 {
+    padding: 10px!important;
+}
+.mrg-0 {
+    margin: 0!important;
+}
+.btm-mrg-10 {
+    margin-bottom: 10px!important;
+}
+.btm-mrg-20 {
+    margin-bottom: 20px!important;
+}
+
+/* Color  */
+.clr-535353 {
+    color: #535353;
+}
+
+
+
+
+/**** MEDIA QUERIES ****/
+@media only screen and (max-width: 991px) {
+    #property-listings .property-listing {
+        padding: 5px!important;
+    }
+    #property-listings .property-listing a {
+        margin: 0;
+    }
+    #property-listings .property-listing .media-body {
+        padding: 10px;
+    }
+    .mainpic {
+        float: left;
+        max-width: 500px;
+        max-height: 400px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mainpic {
+        max-width: 250px;
+        max-height: 300px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #property-listings .property-listing img {
+        max-width: 180px;
+    }
+}
+
+
