@@ -6,7 +6,7 @@ angular.module('newMotoApp')
       'title': 'Home',
       'link': '/'
     }, {
-      'title': 'Settings',
+      'title': 'Dashboard',
       'link': '/settings',
       'hide': '!currentUser'
     },{
