@@ -1,14 +1,14 @@
 <div ng-include="'partials/navbar'"></div>
 <div class = "searchcontainer">
 <!--<h2>Find Your next bike!</h2>-->
-<div id="searchbox" class="">
+<div id="searchbox" class="col-md-4">
     <!-- form for searching Adds-->
     <form class="form-horizontal form-group" ng-submit="searchDatabase(search)" >
         <!-- keyword search-->
         <!--<label>Search  </label>--><input label="Search" placeholder="Search"  type="text" class = "input-large form-control" ng-model="search.keywords"> <!--ng model was search.$ --!>
         <!-- select high and low price!!-->
-        <!--<label>Price Range  </label>--><input label="Search"  type="text" ng-model="search.lowPrice" class = "input-large form-control" placeholder="Low">
-        <input label="Search"  type="text" ng-model="search.highPrice" class = "input-large form-control" placeholder="High">
+        <!--<label>Price Range  </label>--><input label="Search"  type="text" ng-model="search.lowPrice" class = "input-large form-control" placeholder="Low price">
+        <input label="Search"  type="text" ng-model="search.highPrice" class = "input-large form-control" placeholder="High price">
 
         <input label="Search"  type="text" ng-model="search.maxMileage" class = "input-large form-control" placeholder="Maximum mileage">
 
@@ -63,7 +63,7 @@
 
             <!--search results div-->
 
-<div id="searchresults" class="" >
+<div id="searchresults" class="col-md-8" >
 
 
 
@@ -87,7 +87,7 @@
     <!--<div class="modal favmodal" ng-show="myValue">-->
         <!--<div>this is a test modal blah blah blah</div>-->
     <!--</div>-->
-
+<div id="listingcontainer">
     <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing" ng-repeat="result in searchresults ">  <!-- | filter:search:strict  removed filter to troubleshooting-->
         <div class="media">
 
@@ -133,7 +133,7 @@
 
 
     </div>
-
+</div>  <!-- closing div for lisitng container-->
 
 
     <!--<div ng-controller="SearchCtrl">-->

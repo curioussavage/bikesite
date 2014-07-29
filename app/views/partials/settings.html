@@ -6,6 +6,7 @@
 <!--<div class="controlBar">-->
 <!--<button ng-click=""></button>-->
 <!--</div>-->
+
 <!--<div class="row" >-->
 <!--<div class="col-sm-12">-->
 <!--<h1>Change Password</h1>-->
@@ -41,8 +42,10 @@
 <!--</form>-->
 <!--</div>-->
 <!--</div>-->
+
+<div id="formContainer">
 <form role="form" class="form-horizontal sellForm" ng-submit="submit()" type = "submit" >
-    <h1>Post your Add</h1>
+    <h2 id="postFormtitle">Post your Add</h2>
 
     <div class="required-field-block">
         <input type="text" placeholder="Name" class="form-control" ng-model="listing.name">
@@ -92,46 +95,46 @@
     </div>
 
 
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <div id="direct_upload" ng-controller="photoUploadCtrl">
+        <h1>Photos</h1>
+
+        <p>You can also drag and drop an image file into the dashed area.</p>
+        <form>
+            <div class="form_line">
+                <label path="title">Title:</label>
+                <div class="form_controls">
+                    <input type="text" class="form-control" placeholder="Title" ng-model="title" ng-change="updateTitle()"/>
+                </div>
+            </div>
+            <div class="form_line">
+                <label>Image:</label>
+                <div class="form_controls">
+                    <div class="upload_button_holder">
+                        <a href="#" class="upload_button">Upload</a>
+                        <input type="file" name="file" class="cloudinary_fileupload">
+                    </div>
+                    <div class="status">{{status}}</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: {{progress}}%" ng-init="progress=0"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form_line">
+                <div class="form_controls">
+                    <div class="preview"></div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+
+
+
+    <button class="btn btn-primary" id="submitbutton" type="submit">Submit</button>
+
 </form>
 
 
-<div id="direct_upload" ng-controller="photoUploadCtrl">
-    <h1>New Photo</h1>
 
-    <p>You can also drag and drop an image file into the dashed area.</p>
-    <form>
-        <div class="form_line">
-            <label path="title">Title:</label>
-            <div class="form_controls">
-                <input type="text" class="form-control" placeholder="Title" ng-model="title" ng-change="updateTitle()"/>
-            </div>
-        </div>
-        <div class="form_line">
-            <label>Image:</label>
-            <div class="form_controls">
-                <div class="upload_button_holder">
-                    <a href="#" class="upload_button">Upload</a>
-                    <input type="file" name="file" class="cloudinary_fileupload">
-                </div>
-                <div class="status">{{status}}</div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: {{progress}}%" ng-init="progress=0"></div>
-                </div>
-            </div>
-        </div>
-        <div class="form_line">
-            <div class="form_controls">
-                <div class="preview"></div>
-            </div>
-        </div>
-    </form>
-    <!--<div class="info">-->
-        <!--<table>-->
-            <!--<tr ng-repeat="(key, value) in result">-->
-                <!--<td> {{key}} </td> <td> {{ value }} </td>-->
-                <!--&lt;!&ndash;<div ><img style="height: 200px; width: 200px;" src="{{result.url}} ng-model="image"/></div>&ndash;&gt;-->
-            <!--</tr>-->
-        <!--</table>-->
-    <!--</div>-->
 </div>

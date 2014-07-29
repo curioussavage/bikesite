@@ -2,6 +2,8 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+    /*background-color: #E5E5E5;*/
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -80,6 +82,18 @@ search box
     max-height: 400px;
 }
 
+
+
+/*#titlepic {*/
+    /*background-image: url('http://res.cloudinary.com/dqap5oe1c/image/upload/v1406008692/zdz2u5dowaapcpyzlbip.jpg');*/
+    /*min-height: 400px;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+
+
+/*}*/
+
+
 /* end search box*/
 
 .actions { margin: 20px 0; }
@@ -104,7 +118,7 @@ td { vertical-align: top; padding-right: 5px; }
 
 .back_link { font-weight: bold; display: block; font-size: 16px; margin: 10px 0; }
 
-form { border: 1px solid #ddd; margin: 15px 0; padding: 15px 0; border-radius: 4px; }
+form {  margin: 15px 0;  border-radius: 4px; }  /*border: 1px solid #ddd;  padding: 15px 0;*/
 form .form_line { margin-bottom: 20px; }
 form .form_controls { margin-left: 180px; }
 form label { float: left; width: 160px; padding-top: 3px; text-align: right; }
@@ -271,8 +285,33 @@ a {
     color: #535353;
 }
 
+.property-listing {   /* custom by me*/
+ max-width: 600px;
+    box-sizing: border-box;
+    background-color: #DBDBDB;
+    margin: auto;
+
+}
+#listingcontainer {
+    margin-top: 15px;
+
+}
+#searchbox {
+    max-width: 400px;
+    margin: auto;
+}
 
 
+#formContainer {
+    max-width: 500px;
+    margin:0 auto;
+}
+#submitbutton {
+    /*margin: 10px 0 0 10px;*/
+}
+#postFormTitle {
+    margin-left: 40px;
+}
 
 /**** MEDIA QUERIES ****/
 @media only screen and (max-width: 991px) {

@@ -11,8 +11,8 @@ angular.module('newMotoApp')
       'hide': '!currentUser'
     },{
         'title': 'Search',
-        'link': '/search',
-        'hide': '!currentUser'
+        'link': '/search'
+
     }];
 
     $scope.logout = function() {
