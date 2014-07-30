@@ -13,7 +13,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-                $http.post('http://www.utahmotomarket.com/listing', listing)  // for local host
+                $http.post('http://localhost:9000/listing', listing)  //   http://www.utahmotomarket.com for local host
                     .success(function(data){
                         deferred.resolve(data);
 

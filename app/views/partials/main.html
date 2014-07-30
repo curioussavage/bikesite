@@ -1,18 +1,25 @@
 <div ng-include="'partials/navbar'"></div>
 
-<div class="jumbotron" id="titlepic" >
-
-  <h2>Come on in. your next ride is waiting for you.</h2>
-
+<div class="row" id="welcomeDiv" >
+    <div id="innerWelcome">
+    <h1>Welcome!</h1>
+  <p> Your next ride is waiting for you...</p>
+    </div>
 </div>
 
-<div class="row marketing">
-  <div ng-repeat="thing in awesomeThings">
-      <h4>{{thing.name}}</h4>
-      <p>{{thing.info}}</p>
-  </div>
+<div class="row middlemarketing">
+    <div class=" taglines col-md-6">
+      <h2>Because We Care</h2>
+        <p>Going to try not to get all mushy here, but for real, we actually care! We built this service because we wanted a better place to find our next bikes. But were not stopping here, stay tuned for new features in the coming months!</p>
+    </div>
+    <div class=" taglines col-md-6">
+        <h2>No Distractions</h2>
+        <p>Most classifieds sites are ugly or really busy, we saw an opportunity to create something better.</p>
+
+        <p> Here at NewMoto we like to keep things simple. we're less is more kind of guys. We know you want to find or sell your ride, and wouldn't it be great to do that without getting a headache from all the adds, crazy pictures and banners? We think so and we think you will too.</p>
+    </div>
 </div>
 
-<div class="footer">
+<div class="footer row">
     <p><span class="glyphicon glyphicon-copyright-mark"></span> 2014 Adam Winn</p>
 </div>

@@ -1,22 +1,35 @@
 /* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+/*body {*/
+  /*padding-top: 20px;*/
+  /*padding-bottom: 20px;*/
     /*background-color: #E5E5E5;*/
 
-}
+/*}*/
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+/*.header,*/
+/*.marketing,*/
+/*.footer {*/
+  /*padding-left: 15px;*/
+  /*padding-right: 15px;*/
+/*}*/
+
+/*     CSS reset    */
+
+body {
+    font-family: 'Open Sans', sans-serif;;
 }
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  /*border-bottom: 1px solid #e5e5e5;*/
+   background-color: #EE352A;
+    overflow: auto;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: 100px;
+    color: #FEF9C4;
+    margin-bottom: 40px;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -30,14 +43,221 @@ body {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
+  /*border-top: 1px solid #e5e5e5;*/
+  background-color: #FEF9C4;
+  min-height: 100px;
+    border-bottom: 30px #EE352A solid;
 }
+.footer p {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.container {
+    width:100%;
+    padding-left: 0 ;
+    padding-right: 0;
+}
+#siteTitle {
+    margin-top: 50px;
+    margin-left: 100px;
+    color: #FEF9C4;
+}
+.nav {
+    margin-top: 50px;
+
+}
+
+.navlinks a {
+    color: #FEF9C4;
+}
+
+.navlinks a:hover {
+    color:#EE352A;
+    background-color: #FEF9C4;
+    font-weight: bold;
+}
+
+/*.active a {*/
+    /*background-color: #FEF9C4;*/
+    /*color:#EE352A;*/
+/*}*/
+#welcomeDiv {
+    width:100%;
+    background-color: white;
+    color: #EE352A;
+    margin-bottom: 100px;
+}
+
+
+#innerWelcome {
+    margin-left: auto ;
+    margin-right: auto;
+    max-width: 350px;
+}
+#innerWelcome h1 {
+    font-size: 500%;
+    /*text-transform:uppercase;*/
+}
+#innerWelcome p {
+    padding-left: 16px;
+}
+.middlemarketing {
+    border-top: 2px #EE352A solid;
+    max-width: 80%;
+    margin:auto;
+    padding-top: 25px;
+}
+
+.taglines {
+    padding: 5px;
+    margin-bottom: 50px;
+
+}
+.taglines p , h2{
+    max-width: 350px;
+    margin-left: 20%;
+
+}
+.taglines h2{
+    color: #EE352A;
+    margin-bottom: 20px;
+    /*text-transform:uppercase;*/
+}
+  /*
+
+  *********  login and signup styles **************
+
+  */
+.loginBox {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.loginBox button {
+    background-color: #EE352A;
+    border:none;
+}
+
+.notRegisteredtext {
+    margin-left: 20px;
+}
+.notRegisteredtext a {
+    color:gray;
+
+}
+.signupBox {
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+.signupBox button {
+    background-color: #EE352A;
+    border:none;
+}
+.signupBox button:hover {
+    background-color: #ee6962;
+    border:none;
+}
+.hasAccount a {
+    color:gray;
+}
+.hasAccount {
+    margin-left: 20px;
+}
+
+.formLabels {
+    text-align: left;
+}
+
 /*
 
+        ******************** SEARCH PAGE STYLES ***************************
+
+*/
+.mainpic {
+    float: left;
+    max-width: 340px;
+    max-height: 400px;
+}
+
+
+.redBtn {
+    background-color: #EE352A;
+    border:none;
+}
+.redBtn:hover {
+    background-color: #ee6962;
+
+}
+.addHeading {
+    color:#EE352A ;
+}
+
+
+/* styles for listings from bootsnip*/
+
+/**** LAYOUT ****/
+.list-inline>li {
+    padding: 0 10px 0 0;
+}
+.container-pad {
+    padding: 30px 15px;
+}
+
+
+/**** MODULE ****/
+.bgc-fff {
+    background-color: #fff!important;
+}
+.box-shad {
+    -webkit-box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+    box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+}
+.brdr {
+    border: 1px solid #ededed;
+}
+
+/* Font changes */
+.fnt-smaller {
+    font-size: .9em;
+}
+.fnt-lighter {
+    color: #bbb;
+}
+
+/* Padding - Margins */
+.pad-10 {
+    padding: 10px!important;
+}
+.mrg-0 {
+    margin: 0!important;
+}
+.btm-mrg-10 {
+    margin-bottom: 10px!important;
+}
+.btm-mrg-20 {
+    margin-bottom: 20px!important;
+}
+
+/* Color  */
+.clr-535353 {
+    color: #535353;
+}
+
+/* end bootsnip styles for listings*/
+
+
+
+
+
+/*
             modal css
 
 */
-
+.popupimage {
+    max-height: 80%;
+    width:100%;
+}
 
 .favmodal {
     background-color: #4585ff;
@@ -66,35 +286,26 @@ body {
     /*}*/
 }
 
+
+
+
+
+
+
 /*
 
-my custom styles
+        ********************** DASHBOARD STYLES **********************
 
 */
 
-
-/*
-search box
-*/
-.mainpic {
-    float: left;
-    max-width: 340px;
-    max-height: 400px;
+.submitbutton {
+    margin-bottom: 50px;
 }
 
 
 
-/*#titlepic {*/
-    /*background-image: url('http://res.cloudinary.com/dqap5oe1c/image/upload/v1406008692/zdz2u5dowaapcpyzlbip.jpg');*/
-    /*min-height: 400px;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
 
-
-/*}*/
-
-
-/* end search box*/
+/* cloudinary styles  */
 
 .actions { margin: 20px 0; }
 .upload_link { color: #000; border: 1px solid #aaa; background-color: #e0e0e0;
@@ -181,109 +392,61 @@ form .error { color: #c55; margin: 0 10px; }
 }
 
 
-/*end my custom styles*/
+/*end my cloudinary styles*/
+
+
 
 
 /* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 100%;  /* was 730px*/
-  }
-}
-.container-narrow > hr {
-  margin: 30px 0;
-}
+/*@media (min-width: 768px) {*/
+  /*.container {*/
+    /*max-width: 100%;  *//* was 730px*/
+  /*}*/
+/*}*/
+/*.container-narrow > hr {*/
+  /*margin: 30px 0;*/
+/*}*/
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
+/* Main marketing message and sign up button      ORIGINAL STYLES*/
+/*.jumbotron {*/
+  /*text-align: center;*/
+  /*border-bottom: 1px solid #e5e5e5;*/
+/*}*/
+/*.jumbotron .btn {*/
+  /*font-size: 21px;*/
+  /*padding: 14px 24px;*/
+/*}*/
 
 /* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
+/*.marketing {*/
+  /*margin: 40px 0;*/
+/*}*/
+/*.marketing p + h4 {*/
+  /*margin-top: 28px;*/
+/*}*/
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {*/
   /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  /*.header,*/
+  /*.marketing,*/
+  /*.footer {*/
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+  /*}*/
   /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
+  /*.header {*/
+    /*margin-bottom: 30px;*/
+  /*}*/
   /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
-
-/*
-a {
-    color: #03a1d1;
-    text-decoration: none!important;
-}
-
-/**** LAYOUT ****/
-.list-inline>li {
-    padding: 0 10px 0 0;
-}
-.container-pad {
-    padding: 30px 15px;
-}
+  /*.jumbotron {*/
+    /*border-bottom: 0;*/
+  /*}*/
+/*}*/
 
 
-/**** MODULE ****/
-.bgc-fff {
-    background-color: #fff!important;
-}
-.box-shad {
-    -webkit-box-shadow: 1px 1px 0 rgba(0,0,0,.2);
-    box-shadow: 1px 1px 0 rgba(0,0,0,.2);
-}
-.brdr {
-    border: 1px solid #ededed;
-}
 
-/* Font changes */
-.fnt-smaller {
-    font-size: .9em;
-}
-.fnt-lighter {
-    color: #bbb;
-}
 
-/* Padding - Margins */
-.pad-10 {
-    padding: 10px!important;
-}
-.mrg-0 {
-    margin: 0!important;
-}
-.btm-mrg-10 {
-    margin-bottom: 10px!important;
-}
-.btm-mrg-20 {
-    margin-bottom: 20px!important;
-}
-
-/* Color  */
-.clr-535353 {
-    color: #535353;
-}
 
 .property-listing {   /* custom by me*/
  max-width: 600px;

@@ -30,32 +30,11 @@
                     ng-disabled="!search.make">
             </select>
                 <br>
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-primary redBtn" type="submit">Submit</button>
 
 
 
-        <!--<div class="btn-group makemenu" >-->
-            <!--<button class="btn btn-default btn-sm dropdown-toggle " id="searchbuttons" type="button" data-toggle="dropdown">-->
-                <!--Make <span class="caret"></span>-->
-            <!--</button>-->
-            <!--<ul class="dropdown-menu">-->
-                <!--<li>Honda</li>-->
-                <!--<li>Triumph</li>-->
-                <!--<li>Suzuki</li>-->
-                <!--<li>Kawasaki</li>-->
-            <!--</ul>-->
-        <!--</div>-->
-        <!--<div class="btn-group ">-->
-            <!--<button class="btn btn-default btn-sm dropdown-toggle " id="searchbuttons" type="button" data-toggle="dropdown">-->
-                <!--Model <span class="caret"></span>-->
-            <!--</button>-->
-            <!--<ul class="dropdown-menu">-->
-                <!--<li></li>-->
-                <!--<li></li>-->
-                <!--<li></li>-->
-                <!--<li></li>-->
-            <!--</ul>-->
-        <!--</div>-->
+
 
     </form>
 
@@ -67,26 +46,6 @@
 
 
 
-
-   <!--<div ng-repeat="result in searchresults | filter:search:strict" class="result well">-->
-       <!--<a ui-sref="listing:{{result.id}}"><img class="mainpic img-responsive" src="images/yeoman.png"></a>-->
-       <!--<div class="resultpreview ">-->
-           <!--<h3>{{result.title}}</h3>-->
-           <!--<div class = "addDetails">-->
-
-               <!--<span>Make: {{result.make}} Model: {{result.model}}</span>-->
-           <!--</div>-->
-           <!--<h4>Price: {{result.price}}</h4>-->
-       <!--</div>-->
-
-       <!--<div>{{result.description}}</div>-->
-
-   <!--</div>-->
-
-
-    <!--<div class="modal favmodal" ng-show="myValue">-->
-        <!--<div>this is a test modal blah blah blah</div>-->
-    <!--</div>-->
 <div id="listingcontainer">
     <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing" ng-repeat="result in searchresults ">  <!-- | filter:search:strict  removed filter to troubleshooting-->
         <div class="media">
@@ -102,7 +61,10 @@
                 <a href="#" target="_parent"></a>
 
                 <h4 class="media-heading">
-                    {{result.title}} <a class="btn " ng-click="toggleModal(result)" >  $ {{result.price}}  <small class="pull-right">{{result.city}}</small></a></h4>
+                    <span class="addHeading">{{result.title}}</span>
+                    <a class="btn " ng-click="toggleModal(result)" >  $ {{result.price}}
+                        <small class="pull-right">{{result.city}}</small></a>
+                </h4>
 
 
                 <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
@@ -135,31 +97,6 @@
     </div>
 </div>  <!-- closing div for lisitng container-->
 
-
-    <!--<div ng-controller="SearchCtrl">-->
-        <!--<script type="text/ng-template" id="myModalContent.html">-->
-            <!--<div class="modal-header">-->
-                <!--<h3 class="modal-title">I'm a modal!</h3>-->
-            <!--</div>-->
-            <!--<div class="modal-body">-->
-                <!--<ul>-->
-                    <!--<li ng-repeat="item in items">-->
-                        <!--<a ng-click="selected.item = item">{{ item }}</a>-->
-                    <!--</li>-->
-                <!--</ul>-->
-                <!--Selected: <b>{{ selected.item }}</b>-->
-            <!--</div>-->
-            <!--<div class="modal-footer">-->
-                <!--<button class="btn btn-primary" ng-click="ok()">OK</button>-->
-                <!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
-            <!--</div>-->
-        <!--</script>-->
-
-        <!--<button class="btn btn-default" ng-click="open()">Open me!</button>-->
-        <!--<button class="btn btn-default" ng-click="open('lg')">Large modal</button>-->
-        <!--<button class="btn btn-default" ng-click="open('sm')">Small modal</button>-->
-
-    <!--</div>-->
 
 </div>
 </div>

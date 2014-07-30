@@ -22,7 +22,7 @@ angular.module('newMotoApp')
       });
     };
 
-    $scope.isActive = function(route) {
-      return route === $location.path();
-    };
+//    $scope.isActive = function(route) {
+//      return route === $location.path();
+//    };
   });
