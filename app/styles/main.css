@@ -179,7 +179,10 @@ body {
     max-width: 340px;
     max-height: 400px;
 }
-
+.searchContainer {
+    width: 90%;
+    margin: 0 auto;
+}
 
 .redBtn {
     background-color: #EE352A;
