@@ -199,6 +199,7 @@ body {
 #searchbox {
     max-width: 350px;
     margin: auto;
+    padding-left: 15px;
 }
 
 
