@@ -192,6 +192,14 @@ body {
 .addHeading {
     color:#EE352A ;
 }
+#listingcontainer {
+    margin-top: 15px;
+
+}
+#searchbox {
+    max-width: 350px;
+    margin: auto;
+}
 
 
 /* styles for listings from bootsnip*/
@@ -455,14 +463,7 @@ form .error { color: #c55; margin: 0 10px; }
     margin: auto;
 
 }
-#listingcontainer {
-    margin-top: 15px;
 
-}
-#searchbox {
-    max-width: 400px;
-    margin: auto;
-}
 
 
 #formContainer {
