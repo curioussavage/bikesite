@@ -184,7 +184,10 @@ body {
     margin: 0 auto;
 
 }
-
+#resultNum {
+    text-align: center;
+    /*margin-left: 26px;*/
+}
 .redBtn {
     background-color: #EE352A;
     border:none;
@@ -267,6 +270,20 @@ body {
             modal css
 
 */
+
+.priceMakeModel p{
+    /*margin: 5px;*/
+    text-align: center;
+    width:100%;
+}
+.descriptionbox {
+    border-left: 1px gray solid;
+}
+.descriptionbox h3 {
+    text-align: center;
+}
+
+
 .popupimage {
     max-height: 80%;
     width:100%;

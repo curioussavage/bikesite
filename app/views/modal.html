@@ -1,14 +1,21 @@
 
 <div class="mainmodal modal" tabindex="-1" role="dialog" > <!--    bs-modal  -->
-<div class="modal-dialog modal-lg">
-<div class="modal-content">
-<img alt="image" class="img-responsive popupimage" src="{{modalResult.images[0]}}"></a><hr>
-<h2 class="popupTitle">{{modalResult.title}}</h2>
-<div class ="priceMakeModel">   $ {{modalResult.price}} | Make: {{modalResult.make}} | Model: {{modalResult.model}} | Year: {{modalResult.year}}</div>   <br>
-<hr>
-<div class = "descriptionbox">
-{{modalResult.description}}
-</div>
-</div>
-</div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+        <img alt="image" class="img-responsive popupimage" src="{{modalResult.images[0]}}"></a>
+        <div class="row">
+
+        <div class ="priceMakeModel col-md-6">
+            <h2 class="popupTitle">{{modalResult.title}}</h2>
+            <p>$ {{modalResult.price}} | Make: {{modalResult.make}} | Model: {{modalResult.model}} | Year: {{modalResult.year}}</p>
+        </div>
+
+            <div class = "descriptionbox col-md-6">
+                <h3>Description</h3>
+            {{modalResult.description}}
+            </div>
+        </div>
+        </div>
+    </div>
 </div>
