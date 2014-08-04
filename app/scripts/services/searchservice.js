@@ -33,7 +33,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-                $http.post('http://http://localhost:9000/search', params)  // for local host     http://localhost:9000
+                $http.post('http://localhost:9000/search', params)  // for local host     http://localhost:9000
                     .success(function(data){
                         deferred.resolve(data);
 

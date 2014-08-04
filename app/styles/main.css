@@ -359,6 +359,13 @@ body {
     max-width: 400px;
     margin: 0 auto;
 }
+.userAdds {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.userAdds p {
+    max-width: 300px;
+}
 
 .submitbutton {
     margin-bottom: 50px;

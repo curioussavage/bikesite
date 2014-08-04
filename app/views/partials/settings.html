@@ -13,6 +13,7 @@
 
         <div class="row userData">
            <h2 style="text-align: left;"> Hello : {{currentUser.name}}</h2>
+            <button  class="btn" ng-click="getMyAdds(listing.user)">get my adds</button>
 
             <button class="btn" ng-click="togglePass()">Change Password</button>
             <div class="row passChange" ng-show="changePass">
@@ -53,9 +54,16 @@
         </div>
         <div class="row userAdds">
             <h2>My Adds</h2>
-            <div >
-
+            <div class="row " ng-repeat="add in Myadds" >
+                <div class="col-md-6">
+                    <h4>{{add.title}}</h4>
+                    <P>{{add.description}}</P>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{add.images[0]}}">
+                </div>
             </div>
+
         </div>
 
 
@@ -65,17 +73,17 @@
     <form role="form" class="form-horizontal sellForm" ng-submit="submit()" type = "submit" >
         <h2 id="postFormtitle">Post your Add</h2>
 
-        <div class="required-field-block">
-            <input type="text" placeholder="Name" class="form-control" ng-model="listing.name">
+        <!--<div class="required-field-block">-->
+            <!--<input type="text" placeholder="Name" class="form-control" ng-model="listing.name">-->
 
-        </div>
+        <!--</div>-->
 
-        <div class="required-field-block">
-            <input type="email" placeholder="Email" class="form-control col-sm-10" id="email" ng-model="listing.email">
+        <!--<div class="required-field-block">-->
+            <!--<input type="email" placeholder="Email" class="form-control col-sm-10" id="email" ng-model="listing.email">-->
 
-        </div>
+        <!--</div>-->
 
-        <input type="tel" placeholder="Phone" class="form-control" id="phone" ng-model="listing.phone">
+        <!--<input type="tel" placeholder="Phone" class="form-control" id="phone" ng-model="listing.phone">-->
 
         <label for="make" class="col-sm-2 control-label">Make</label>
         <select class="form-control" id="make"

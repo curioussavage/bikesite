@@ -53,6 +53,15 @@ angular.module('newMotoApp')
         }
 
     }
+    $scope.getMyAdds = function(id) {
+        Sell.getUserAdds(id).then(function(data){
+            console.log(data);
+            $scope.Myadds = data;
+
+
+        });
+    }
+
 
 
   });
