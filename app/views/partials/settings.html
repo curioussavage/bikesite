@@ -2,141 +2,162 @@
 <div ng-include="'partials/navbar.html'"></div>
 
 
-<!--this will be a little control bar to switch between the user account and the addpost form-->
-<!--<div class="controlBar">-->
-<!--<button ng-click=""></button>-->
-<!--</div>-->
 
-<!--<div class="row" >-->
-<!--<div class="col-sm-12">-->
-<!--<h1>Change Password</h1>-->
-<!--</div>-->
-<!--<div class="col-sm-12">-->
-<!--<form class="form" name="form" ng-submit="changePassword(form)" novalidate>-->
-<!---->
-<!--<div class="form-group">-->
-<!--<label>Current Password</label>-->
 
-<!--<input type="password" name="password" class="form-control" ng-model="user.oldPassword"-->
-<!--mongoose-error/>    -->
-<!--<p class="help-block" ng-show="form.password.$error.mongoose">-->
-<!--{{ errors.other }}-->
-<!--</p>-->
-<!--</div>-->
 
-<!--<div class="form-group">-->
-<!--<label>New Password</label>-->
 
-<!--<input type="password" name="newPassword" class="form-control" ng-model="user.newPassword" -->
-<!--ng-minlength="3"-->
-<!--required/>-->
-<!--<p class="help-block"-->
-<!--ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || submitted)">-->
-<!--Password must be at least 3 characters.-->
-<!--</p>-->
-<!--</div>-->
 
-<!--<p class="help-block"> {{ message }} </p>-->
+<div class="row dashContainer">
 
-<!--<button class="btn btn-lg btn-primary" type="submit">Save changes</button>-->
-<!--</form>-->
-<!--</div>-->
-<!--</div>-->
+    <div class="col-md-6 userInfo">
 
-<div id="formContainer">
-<form role="form" class="form-horizontal sellForm" ng-submit="submit()" type = "submit" >
-    <h2 id="postFormtitle">Post your Add</h2>
+        <div class="row userData">
+           <h2 style="text-align: left;"> Hello : {{currentUser.name}}</h2>
 
-    <div class="required-field-block">
-        <input type="text" placeholder="Name" class="form-control" ng-model="listing.name">
+            <button class="btn" ng-click="togglePass()">Change Password</button>
+            <div class="row passChange" ng-show="changePass">
+                <div class="col-sm-12">
+                    <h4>Change Password</h4>
+                </div>
+                <div class="col-sm-12">
+                    <form class="form" name="form" ng-submit="changePassword(form)" novalidate>
 
-    </div>
+                        <div class="form-group">
+                            <label>Current Password</label>
 
-    <div class="required-field-block">
-        <input type="email" placeholder="Email" class="form-control col-sm-10" id="email" ng-model="listing.email">
+                            <input type="password" name="password" class="form-control" ng-model="user.oldPassword"
+                                   mongoose-error/>
+                            <p class="help-block" ng-show="form.password.$error.mongoose">
+                                {{ errors.other }}
+                            </p>
+                        </div>
 
-    </div>
+                        <div class="form-group">
+                            <label>New Password</label>
 
-    <input type="tel" placeholder="Phone" class="form-control" id="phone" ng-model="listing.phone">
+                            <input type="password" name="newPassword" class="form-control" ng-model="user.newPassword"
+                                   ng-minlength="3"
+                                   required/>
+                            <p class="help-block"
+                               ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || submitted)">
+                                Password must be at least 3 characters.
+                            </p>
+                        </div>
 
-    <label for="make" class="col-sm-2 control-label">Make</label>
-    <select class="form-control" id="make"
-            ng-model="listing.make"
-            ng-options="key as key for (key , value) in makesAndModels" >
+                        <p class="help-block"> {{ message }} </p>
 
-    </select>
-    <!--<label for="model" class="col-sm-2 control-label">model</label>-->
-
-    <select class="form-control" id="model" placeholder="model"
-            ng-model="listing.model"
-            ng-options="model as model for model in makesAndModels[listing.make]"
-            ng-disabled="!listing.make">
-    </select>
-
-    <div class="required-field-block">
-        <input type="text" placeholder="Year" class="form-control" ng-model="listing.year">
-
-    </div>
-    <div class="required-field-block">
-        <input type="text" placeholder="Mileage" class="form-control" ng-model="listing.mileage">
-
-    </div>
-    <div class="required-field-block">
-        <input type="text" placeholder="Price" class="form-control" ng-model="listing.price">
-
-    </div>
-    <div class="required-field-block">
-        <input type="text" placeholder="Add Title" class="form-control" ng-model="listing.title">
-
-    </div>
-    <div class="required-field-block">
-        <textarea rows="3" class="form-control" placeholder="Description" ng-model="listing.description"></textarea>
-
-    </div>
-    <button class="btn btn-primary redBtn" id="submitbutton" type="submit">Submit</button>
-
-    <div id="direct_upload" ng-controller="photoUploadCtrl">
-        <h1>Photos</h1>
-
-        <p>You can also drag and drop an image file into the dashed area.</p>
-        <form>
-            <div class="form_line">
-                <label path="title">Title:</label>
-                <div class="form_controls">
-                    <input type="text" class="form-control" placeholder="Title" ng-model="title" ng-change="updateTitle()"/>
+                        <button class="btn btn-lg btn-primary" type="submit">Save changes</button>
+                    </form>
                 </div>
             </div>
-            <div class="form_line">
-                <label>Image:</label>
-                <div class="form_controls">
-                    <div class="upload_button_holder">
-                        <a href="#" class="upload_button">Upload</a>
-                        <input type="file" name="file" class="cloudinary_fileupload">
+        </div>
+        <div class="row userAdds">
+            <h2>My Adds</h2>
+            <div >
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="formContainer" class="col-md-6">
+    <form role="form" class="form-horizontal sellForm" ng-submit="submit()" type = "submit" >
+        <h2 id="postFormtitle">Post your Add</h2>
+
+        <div class="required-field-block">
+            <input type="text" placeholder="Name" class="form-control" ng-model="listing.name">
+
+        </div>
+
+        <div class="required-field-block">
+            <input type="email" placeholder="Email" class="form-control col-sm-10" id="email" ng-model="listing.email">
+
+        </div>
+
+        <input type="tel" placeholder="Phone" class="form-control" id="phone" ng-model="listing.phone">
+
+        <label for="make" class="col-sm-2 control-label">Make</label>
+        <select class="form-control" id="make"
+                ng-model="listing.make"
+                ng-options="key as key for (key , value) in makesAndModels" >
+
+        </select>
+        <!--<label for="model" class="col-sm-2 control-label">model</label>-->
+
+        <select class="form-control" id="model" placeholder="model"
+                ng-model="listing.model"
+                ng-options="model as model for model in makesAndModels[listing.make]"
+                ng-disabled="!listing.make">
+        </select>
+
+        <div class="required-field-block">
+            <input type="text" placeholder="Year" class="form-control" ng-model="listing.year">
+
+        </div>
+        <div class="required-field-block">
+            <input type="text" placeholder="Mileage" class="form-control" ng-model="listing.mileage">
+
+        </div>
+        <div class="required-field-block">
+            <input type="text" placeholder="Price" class="form-control" ng-model="listing.price">
+
+        </div>
+        <div class="required-field-block">
+            <input type="text" placeholder="Add Title" class="form-control" ng-model="listing.title">
+
+        </div>
+        <div class="required-field-block">
+            <textarea rows="3" class="form-control" placeholder="Description" ng-model="listing.description"></textarea>
+
+        </div>
+        <button class="btn btn-primary redBtn" id="submitbutton" type="submit">Submit</button>
+
+        <div id="direct_upload" ng-controller="photoUploadCtrl">
+            <h1>Photos</h1>
+
+            <p>You can also drag and drop an image file into the dashed area.</p>
+            <form>
+                <div class="form_line">
+                    <label path="title">Title:</label>
+                    <div class="form_controls">
+                        <input type="text" class="form-control" placeholder="Title" ng-model="title" ng-change="updateTitle()"/>
                     </div>
-                    <div class="status">{{status}}</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: {{progress}}%" ng-init="progress=0"></div>
+                </div>
+                <div class="form_line">
+                    <label>Image:</label>
+                    <div class="form_controls">
+                        <div class="upload_button_holder">
+                            <a href="#" class="upload_button">Upload</a>
+                            <input type="file" name="file" class="cloudinary_fileupload">
+                        </div>
+                        <div class="status">{{status}}</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: {{progress}}%" ng-init="progress=0"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="form_line">
-                <div class="form_controls">
-                    <div class="preview"></div>
+                <div class="form_line">
+                    <div class="form_controls">
+                        <div class="preview"></div>
+                    </div>
                 </div>
-            </div>
 
 
-        </form>
+            </form>
+
+        </div>
+
+
+
+
+
+
+    </form>
+
+    <div style="height: 50px;"></div>
 
     </div>
 
-
-
-
-
-
-</form>
-
-<div style="height: 50px;"></div>
-
-</div>
+        <!-- end of top container-->
+ </div>

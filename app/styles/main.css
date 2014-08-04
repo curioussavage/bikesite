@@ -264,12 +264,23 @@ body {
 
 
 
-
-
+.favButton:hover {
+    color:red;
+}
+.favBox {
+    max-width: 250px;
+}
+.favButton {
+    max-width: 250px;
+}
 /*
             modal css
 
 */
+.modal-details  {
+    min-height: 200px;
+    border-top: 1px gray solid;
+}
 
 .priceMakeModel p{
     /*margin: 5px;*/
@@ -278,11 +289,21 @@ body {
 }
 .descriptionbox {
     border-left: 1px gray solid;
+    min-height: 200px;
 }
 .descriptionbox h3 {
     text-align: center;
 }
+/*.popupPrice {*/
+    /*text-align: center;*/
+/*}*/
+.modalButtons {
+    margin-left: 20%;
 
+}
+.modalBikeInfo {
+    margin-bottom: 5%;
+}
 
 .popupimage {
     max-height: 80%;
@@ -327,6 +348,17 @@ body {
         ********************** DASHBOARD STYLES **********************
 
 */
+.passChange {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.userData {
+    min-height: 200px;
+    /*border: 2px lightgrey solid;*/
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 0 auto;
+}
 
 .submitbutton {
     margin-bottom: 50px;

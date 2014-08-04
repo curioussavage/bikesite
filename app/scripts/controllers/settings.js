@@ -26,7 +26,7 @@ angular.module('newMotoApp')
         $scope.listing.images = [];
 
         Auth.currentUser().$promise.then(function(user){
-            console.log('The ID is:', user._id);
+//            console.log('The current user ID is:', user._id);
             $scope.listing.user = user._id;
             console.log($scope.listing);
         });
@@ -44,7 +44,15 @@ angular.module('newMotoApp')
 
         };
 
+    $scope.togglePass = function() {
+        if ($scope.changePass == true) {
+            $scope.changePass = false;
+        } else {
+            $scope.changePass = true;
 
+        }
+
+    }
 
 
   });

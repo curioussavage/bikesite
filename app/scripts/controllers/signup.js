@@ -12,7 +12,9 @@ angular.module('newMotoApp')
         Auth.createUser({
           name: $scope.user.name,
           email: $scope.user.email,
-          password: $scope.user.password
+          password: $scope.user.password,
+          phone: $scope.user.phone,
+          zip: $scope.user.zip
         })
         .then( function() {
           // Account created, redirect to home
