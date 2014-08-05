@@ -61,7 +61,9 @@ angular.module('newMotoApp')
 
         });
     }
-
+    $scope.archiveAdd = function() {
+        console.log('delete add will go here')
+    }
 
 
   });
