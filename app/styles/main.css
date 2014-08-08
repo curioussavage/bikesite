@@ -370,7 +370,9 @@ body {
 .submitbutton {
     margin-bottom: 50px;
 }
-
+.myadImages {
+    max-width: 100%;
+}
 
 
 

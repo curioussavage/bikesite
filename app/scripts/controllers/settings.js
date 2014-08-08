@@ -29,18 +29,20 @@ angular.module('newMotoApp')
 //            console.log('The current user ID is:', user._id);
             $scope.listing.user = user._id;
             console.log($scope.listing);
+
+            $scope.getMyAdds(user._id)
         });
 
-//
-//            $scope.listing.user = x._id;
-//            console.log(x)
-//
+
 
 
 
         $scope.submit = function () {
 
-            Sell.postAdd($scope.listing);
+            Sell.postAdd($scope.listing).then(Sell.getUserAdds($scope.listing.user))
+
+
+
 
         };
 
@@ -53,6 +55,7 @@ angular.module('newMotoApp')
         }
 
     }
+
     $scope.getMyAdds = function(id) {
         Sell.getUserAdds(id).then(function(data){
             console.log(data);
@@ -61,8 +64,10 @@ angular.module('newMotoApp')
 
         });
     }
+
     $scope.archiveAdd = function() {
-        console.log('delete add will go here')
+        var id = this.add._id;
+        Sell.archiveAdd(id);
     }
 
 

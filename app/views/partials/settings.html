@@ -58,11 +58,11 @@
                 <div class="col-md-6">
                     <h4>{{add.title}}</h4>
                     <P>{{add.description}}</P>
-                    <button class="btn" ng-click="archiveAdd()">Delete Add</button>
+                    <button class="btn" ng-click="archiveAdd()">Delete Ad</button>
 
                 </div>
                 <div class="col-md-6">
-                    <img src="{{add.images[0]}}">
+                    <img class="myadImages" src="{{add.images[0]}}">
                 </div>
             </div>
 
@@ -73,7 +73,7 @@
 
     <div id="formContainer" class="col-md-6">
     <form role="form" class="form-horizontal sellForm" ng-submit="submit()" type = "submit" >
-        <h2 id="postFormtitle">Post your Add</h2>
+        <h2 id="postFormtitle">Post your Ad</h2>
 
         <!--<div class="required-field-block">-->
             <!--<input type="text" placeholder="Name" class="form-control" ng-model="listing.name">-->
