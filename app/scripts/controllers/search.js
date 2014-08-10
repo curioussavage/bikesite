@@ -36,12 +36,14 @@ angular.module('newMotoApp')
         };
         $scope.favs =  [];
 
+        if ($rootScope.currentUser) {
+            Search.getFavs($rootScope.currentUser.id).then(function(data){
+                for (var i = 0; i < data.length ; i++) {
+                    $scope.favs.push(data[i])
+                }
+            })
+        }
 
-        Search.getFavs($rootScope.currentUser.id).then(function(data){
-            for (var i = 0; i < data.length ; i++) {
-                $scope.favs.push(data[i])
-            }
-        })
 
 
 
