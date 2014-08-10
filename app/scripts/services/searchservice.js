@@ -41,7 +41,7 @@ angular.module('newMotoApp')
                 favorite.id = $rootScope.currentUser.id
 
 
-                $http.post('http://localhost:9000/favs', favorite)  // for local host     http://localhost:9000
+                $http.post('http://www.utahmotomarket.com/favs', favorite)  // for local host     http://localhost:9000
                     .success(function (data) {
                         deferred.resolve(data);
 
@@ -62,7 +62,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-                $http.put('http://localhost:9000/favs', favorite)  // for local host     http://localhost:9000
+                $http.put('http://www.utahmotomarket.com/favs', favorite)  // for local host     http://localhost:9000
                     .success(function (data) {
                         deferred.resolve(data);
 
@@ -79,7 +79,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-            $http.get('http://localhost:9000/favs' + id)// for local host     http://localhost:9000   // user._id
+            $http.get('http://www.utahmotomarket.com/favs' + id)// for local host     http://localhost:9000   // user._id
                 .success(function (data) {
                     deferred.resolve(data);
 
