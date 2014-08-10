@@ -41,7 +41,7 @@
     <div>
         <h3>Favorites</h3><hr>
         <div class="favBox" ng-repeat="fav in favs track by $index">
-            <h4>{{fav.title}}</h4>
+            <h4>{{fav.title}}</h4><button class="btn" ng-click="removeFav(fav._id)">remove</button>
             <img class="favButton" ng-click="toggleModal(fav)"  src="{{fav.images[0]}}" >
         </div>
 

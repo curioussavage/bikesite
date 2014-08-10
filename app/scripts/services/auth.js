@@ -106,6 +106,6 @@ angular.module('newMotoApp')
       isLoggedIn: function() {
         var user = $rootScope.currentUser;
         return !!user;
-      },
+      }
     };
   });

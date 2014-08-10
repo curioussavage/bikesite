@@ -32,8 +32,12 @@ angular.module('newMotoApp', [
             controller: 'SearchCtrl',
             resolve: {
                 adds: function (Search) {
-                    return Search.getAdds();
+
+                   return Search.getAdds();
+
                 }
+
+
             }
         })
       .otherwise({
