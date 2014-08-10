@@ -66,7 +66,7 @@ angular.module('newMotoApp')
     }
 
     $scope.archiveAdd = function() {
-        $scope.myadds.splice(this.$index, 1);
+        $scope.Myadds.splice(this.$index, 1);
         var id = this.add._id;
         Sell.archiveAdd(id);
     }
