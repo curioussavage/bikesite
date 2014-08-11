@@ -8,7 +8,7 @@ angular.module('newMotoApp')
 
             var deferred = $q.defer();
 
-            $http({method: 'GET', url: 'http://www.utahmotomarket.com/search'})   // for local host   http://localhost:9000/search
+            $http({method: 'GET', url: 'http://localhost:9000/search'})   // for local host   http://localhost:9000/search
                 .success(function (data) {                                          // 'http://www.utahmotomarket.com/search'
                     deferred.resolve(data);
                 }).error(function (err) {
@@ -24,7 +24,7 @@ angular.module('newMotoApp')
 
             var deferred = $q.defer();
 
-            $http.post('http://www.utahmotomarket.com/search', params)  // for local host     http://localhost:9000
+            $http.post('http://localhost:9000/search', params)  // for local host     http://localhost:9000
                 .success(function (data) {
                     deferred.resolve(data);
 
@@ -36,19 +36,24 @@ angular.module('newMotoApp')
 
         postFav: function (fav) {
             var favorite = {addId: fav, id: undefined}
-            var deferred = $q.defer();
+            if ($rootScope.currentUser){
+                var deferred = $q.defer();
 
-                favorite.id = $rootScope.currentUser.id
+                favorite.id = $rootScope.currentUser.id;
 
 
-                $http.post('http://www.utahmotomarket.com/favs', favorite)  // for local host     http://localhost:9000
+                $http.post('http://localhost:9000/favs', favorite)  // for local host     http://localhost:9000
                     .success(function (data) {
                         deferred.resolve(data);
 
 
                     });
-                        console.log(deferred.promise)
+                console.log(deferred.promise)
                 return deferred.promise;
+
+            } else {
+                Window.localStorage
+            }
 
 
 
@@ -62,7 +67,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-                $http.put('http://www.utahmotomarket.com/favs', favorite)  // for local host     http://localhost:9000
+                $http.put('http://localhost:9000/favs', favorite)  // for local host     http://localhost:9000
                     .success(function (data) {
                         deferred.resolve(data);
 
@@ -79,7 +84,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-            $http.get('http://www.utahmotomarket.com/favs' + id)// for local host     http://localhost:9000   // user._id
+            $http.get('http://localhost:9000/favs' + id)// for local host     http://localhost:9000   // user._id
                 .success(function (data) {
                     deferred.resolve(data);
 

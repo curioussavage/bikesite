@@ -34,6 +34,19 @@ angular.module('newMotoApp')
             myOtherModal.$promise.then(myOtherModal.show);
             console.log($scope.modalResult)
         };
+
+
+//      Favorite adds logic       //
+        Storage.prototype.setObject = function(key, value) {
+            this.setItem(key, JSON.stringify(value));
+        };
+
+        Storage.prototype.getObject = function(key) {
+            var value = this.getItem(key);
+            return value && JSON.parse(value);
+        };
+
+
         $scope.favs =  [];
 
         if ($rootScope.currentUser) {
@@ -42,6 +55,12 @@ angular.module('newMotoApp')
                     $scope.favs.push(data[i])
                 }
             })
+        } else {
+            if(!window.localStorage.getItem('favs')) {
+                window.localStorage.setObject('favs', $scope.favs)
+            } else {
+                $scope.favs = window.localStorage.getObject('favs')
+                }
         }
 
 
@@ -51,18 +70,30 @@ angular.module('newMotoApp')
 
         $scope.addFav = function(favs) {
             $scope.favs.push($scope.modalResult);
-            Search.postFav($scope.modalResult._id).then(function(data) {
-                console.log(data);
-            })
+            if ($rootScope.currentUser){
+                Search.postFav($scope.modalResult._id).then(function(data) {
+                    console.log(data);
+                })
+            } else {
+                if(!window.localStorage.getObject('favs')) {
+                    window.localStorage.setObject('favs', $scope.favs)
+                } else {window.localStorage.setObject('favs', $scope.favs)}
+            }
 
         };
 
-        $scope.removeFav = function (id){
+        $scope.removeFav = function (id) {
 //            console.log(this)
             $scope.favs.splice(this.$index, 1)
-            Search.removeFav(id).then(function(){
+            if ($rootScope.currentUser) {
+                Search.removeFav(id).then(function () {
 
-            })
+                })
+            } else {if(!window.localStorage.getObject('favs')) {
+                    window.localStorage.setObject('favs', $scope.favs)
+                } else {window.localStorage.setObject('favs', $scope.favs)}
+
+            }
         }
 
 
