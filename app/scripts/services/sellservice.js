@@ -1,5 +1,8 @@
 'use strict';
 
+var siteUrl = 'http://www.newmoto.us';
+//var siteUrl = 'http://localhost:9000';
+
 angular.module('newMotoApp')
   .service('Sell', function Sell($http, $q) {
 
@@ -12,7 +15,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-                $http.post('http://www.newmoto.us/listing', listing)  //   http://www.newmoto.us for local host
+                $http.post( siteUrl + '/listing', listing)  //   http://www.newmoto.us for local host
                     .success(function(data){
                         deferred.resolve(data);
 
@@ -22,20 +25,18 @@ angular.module('newMotoApp')
 
                 return deferred.promise;
               },
-            confirmZip: function (zip) {
+            confirmZip: function(zip){
+
                 var deferred = $q.defer();
 
 
-                $http.get('http://www.zipfeeder.us/zip?key=sfNpKD_X&zips=' + zip)  //   http://www.utahmotomarket.com for local host
+                $http({method: 'GET', url: 'http://zipfeeder.us/zip?key=sfNpKD_X&zips=' + zip })
                     .success(function(data){
                         deferred.resolve(data);
-
-                    });
-
+                    }).error(function(err) { console.log(err); });
 
 
                 return deferred.promise;
-
             },
 
             getUserAdds: function(id){
@@ -43,8 +44,8 @@ angular.module('newMotoApp')
                 var deferred = $q.defer();
 
 
-                $http({method: 'GET', url: 'http://www.newmoto.us/userAdds' + id})   // for local host   http://localhost:9000/search
-                    .success(function(data){                                          // http://www.newmoto.us
+                $http({method: 'GET', url: siteUrl + '/userAdds' + id})
+                    .success(function(data){
                         deferred.resolve(data);
                       }).error(function(err) { console.log(err); });
 
@@ -55,7 +56,7 @@ angular.module('newMotoApp')
                 var deferred = $q.defer();
 
 
-                $http.put('http://www.newmoto.us/listing', {'id': id})  //   http://www.utahmotomarket.com for local host
+                $http.put( siteUrl + '/listing', {'id': id})  //   http://www.utahmotomarket.com for local host
                     .success(function(data){
                         deferred.resolve(data);
 

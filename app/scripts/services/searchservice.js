@@ -8,7 +8,7 @@ angular.module('newMotoApp')
 
             var deferred = $q.defer();
 
-            $http({method: 'GET', url: 'http://www.newmoto.us/search'})   // for local host   http://localhost:9000/search
+            $http({method: 'GET', url: siteUrl + '/search'})   // for local host   http://localhost:9000/search
                 .success(function (data) {                                          // 'http://www.utahmotomarket.com/search'
                     deferred.resolve(data);
                 }).error(function (err) {
@@ -24,7 +24,7 @@ angular.module('newMotoApp')
 
             var deferred = $q.defer();
 
-            $http.post('http://www.newmoto.us/search', params)  // for local host     http://localhost:9000
+            $http.post(siteUrl + '/search', params)  // for local host     http://localhost:9000
                 .success(function (data) {
                     deferred.resolve(data);
 
@@ -42,7 +42,7 @@ angular.module('newMotoApp')
                 favorite.id = $rootScope.currentUser.id;
 
 
-                $http.post('http://www.newmoto.us/favs', favorite)  // for local host     http://localhost:9000
+                $http.post(siteUrl + '/favs', favorite)  // for local host     http://localhost:9000
                     .success(function (data) {
                         deferred.resolve(data);
 
@@ -67,7 +67,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-                $http.put('http://www.newmoto.us/favs', favorite)  // for local host     http://localhost:9000
+                $http.put(siteUrl + '/favs', favorite)  // for local host     http://localhost:9000
                     .success(function (data) {
                         deferred.resolve(data);
 
@@ -84,7 +84,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-            $http.get('http://www.newmoto.us/favs' + id)// for local host     http://localhost:9000   // user._id
+            $http.get(siteUrl + '/favs' + id)// for local host     http://localhost:9000   // user._id
                 .success(function (data) {
                     deferred.resolve(data);
 
