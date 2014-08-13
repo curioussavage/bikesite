@@ -67,7 +67,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-                $http.put('http://http://www.newmoto.us/favs', favorite)  // for local host     http://localhost:9000
+                $http.put('http://www.newmoto.us/favs', favorite)  // for local host     http://localhost:9000
                     .success(function (data) {
                         deferred.resolve(data);
 
@@ -84,7 +84,7 @@ angular.module('newMotoApp')
 
                 var deferred = $q.defer();
 
-            $http.get('http://http://www.newmoto.us/favs' + id)// for local host     http://localhost:9000   // user._id
+            $http.get('http://www.newmoto.us/favs' + id)// for local host     http://localhost:9000   // user._id
                 .success(function (data) {
                     deferred.resolve(data);
 

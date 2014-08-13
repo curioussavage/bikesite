@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2a80d48-e770-49b4-b81e-c35d008271f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/photoupload.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/photoupload.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/searchservice.js" afterPath="$PROJECT_DIR$/app/scripts/services/searchservice.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/sellservice.js" afterPath="$PROJECT_DIR$/app/scripts/services/sellservice.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -28,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="searchservice.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="searchservice.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/services/searchservice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4368932" vertical-offset="0" max-vertical-offset="1635">
-              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="1635">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sellservice.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sellservice.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/services/sellservice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-              <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.63106793" vertical-offset="0" max-vertical-offset="975">
+              <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -141,8 +140,8 @@
         <option value="$PROJECT_DIR$/app/scripts/controllers/settings.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/search.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/photoupload.js" />
-        <option value="$PROJECT_DIR$/app/scripts/services/sellservice.js" />
         <option value="$PROJECT_DIR$/app/scripts/services/searchservice.js" />
+        <option value="$PROJECT_DIR$/app/scripts/services/sellservice.js" />
       </list>
     </option>
   </component>
@@ -984,18 +983,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/sellservice.js">
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/searchservice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-          <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="1635">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/searchservice.js">
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/sellservice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4368932" vertical-offset="0" max-vertical-offset="1635">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.63106793" vertical-offset="0" max-vertical-offset="975">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
           <folding />
         </state>
       </provider>
