@@ -24,6 +24,7 @@ angular.module('newMotoApp')
 //    $scope.postedAdd = post
         $scope.listing = {};
         $scope.listing.images = [];
+        $scope.listing.zip = "";
 
         Auth.currentUser().$promise.then(function(user){
 //            console.log('The current user ID is:', user._id);
@@ -39,7 +40,14 @@ angular.module('newMotoApp')
 
         $scope.submit = function () {
 
-            Sell.postAdd($scope.listing).then(Sell.getUserAdds($scope.listing.user))
+            Sell.confirmZip($scope.listing.zip).then(function(data){
+                    console.log(data);
+                $scope.listing.lat = data.zips.latitude;
+                $scope.listing.long = data.zips.longitude;
+
+                Sell.postAdd($scope.listing).then(Sell.getUserAdds($scope.listing.user))
+
+            })
 
 
 
@@ -70,6 +78,8 @@ angular.module('newMotoApp')
         var id = this.add._id;
         Sell.archiveAdd(id);
     }
+
+
 
 
   });

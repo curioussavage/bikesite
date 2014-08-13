@@ -121,6 +121,10 @@
             <textarea rows="3" class="form-control" placeholder="Description" ng-model="listing.description"></textarea>
 
         </div>
+        <div>
+            <input type="text" style="max-width: 200px;" class="form-control" placeholder="City" ng-model="listing.city">
+            <input type="text" style="max-width: 200px;" class="form-control" placeholder="Zip" ng-model="listing.zip">
+        </div>
         <button class="btn btn-primary redBtn" id="submitbutton" type="submit">Submit</button>
 
         <div id="direct_upload" ng-controller="photoUploadCtrl">
