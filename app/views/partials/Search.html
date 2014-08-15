@@ -29,6 +29,8 @@
                     ng-options="model as model for model in makesAndModels[search.make]"
                     ng-disabled="!search.make">
             </select>
+            <input label="Search" type="text" ng-model="search.zip" class="form-control" placeholder="enter zip" >
+        <input label="Search" type="text" ng-model="search.maxDistance" class="form-control" placeholder="enter Maximum distance" >
                 <br>
         <button class="btn btn-primary redBtn" type="submit">Submit</button>
 

@@ -39,15 +39,17 @@ angular.module('newMotoApp')
 
 
         $scope.submit = function () {
+            Sell.postAdd($scope.listing).then(Sell.getUserAdds($scope.listing.user));
 
-            Sell.confirmZip($scope.listing.zip).then(function(data){
-                    console.log(data);
-                $scope.listing.lat = data.zips.latitude;
-                $scope.listing.long = data.zips.longitude;
-
-                Sell.postAdd($scope.listing).then(Sell.getUserAdds($scope.listing.user))
-
-            })
+//            Sell.confirmZip($scope.listing.zip).then(function(data){
+//
+//                    console.log(data);
+//                $scope.listing.lat = data.zips.latitude;
+//                $scope.listing.long = data.zips.longitude;
+//
+//
+//
+//            })
 
 
 
